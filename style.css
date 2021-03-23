@@ -1,3 +1,166 @@
-h1 {
-    color: pink;
+body {
+  background-image: url(https://images.hdqwalls.com/download/neon-city-pan-4k-20-2560x1440.jpg);
+  background-size: cover;
+  margin: 0;
 }
+
+.topEl {
+    align-content: center;
+    text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  color: #ff6ec7;
+  text-shadow: 0 0 3px #ff6ec7, 0 0 20px rgb(255 110 199 / 0.8),
+    0 0 35px rgb(255 110 199 / 0.7), 0 0 50px rgb(255 110 199 / 0.6);
+  border-color: #fff;
+  font-family: Rye, cursive;
+  -webkit-text-stroke: 0.3px rgb(112, 3, 85);
+}
+
+
+h2 {
+  font-size: 20px;
+  text-align: center;
+  color: #ff6ec7;
+  text-shadow: 0 0 3px #ff6ec7, 0 0 20px rgb(255 110 199 / 0.8),
+    0 0 35px rgb(255 110 199 / 0.7), 0 0 50px rgb(255 110 199 / 0.6);
+  border-color: #fff;
+  font-family: Rye, cursive;
+  -webkit-text-stroke: 0.3px rgb(112, 3, 85);
+}
+
+.slotColumns {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  /* align-content: center; */
+  grid-template-columns: repeat(3, auto);
+}
+
+.slot {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  /* border: 1px solid white; */
+  overflow: hidden;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  width: 250px;
+  height: 250px;
+  /* animation-name: spin;
+     animation-duration: 5000ms;
+     animation-iteration-count: infinite;
+     animation-timing-function: linear;  */
+  /* animation: spin 10s linear infinite; */
+  animation: spin 10s linear infinite;
+}
+
+button {
+  outline: 0;
+  position: relative;
+  display: inline-block;
+  flex-wrap: wrap;
+  padding: 10px 40px;
+  font-size: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #ff6ec7;
+  background: #ff6ec7;
+  color: #000;
+  font-weight: 600;
+  transition: box-shadow 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+
+button:hover {
+  background-color: #ff6ec7;
+  color: #000;
+  box-shadow: 0 0 5px #ff6ec7, 0 0 20px rgb(255 110 199 / 0.8),
+    0 0 35px rgb(255 110 199 / 0.7), 0 0 50px rgb(255 110 199 / 0.6);
+  border-color: #fff;
+}
+
+
+.animate__backInDown {
+    animation: backInDown;
+    animation-duration: 2s;;
+}
+
+#first {
+  background-image: url("img/Jackpot.jpeg");
+  background-size: cover;
+}
+
+#second {
+  background-image: url("img/Bomb.jpeg");
+  background-size: cover;
+}
+
+#third {
+  background-image: url("img/Cherry.jpeg");
+  background-size: cover;
+}
+
+/* #fourthSlot {
+  background-image: url("img/Clover.jpeg");
+  background-size: cover;
+}
+
+#fifthSlot {
+  background-image: url("img/Jackpot.jpeg");
+  background-size: cover;
+}
+
+#sixthSlot {
+  background-image: url("img/Dragon.jpeg");
+  background-size: cover;
+}
+
+#seventhSlot {
+  background-image: url("img/Heart.jpeg");
+  background-size: cover;
+}
+
+#eighthSlot {
+  background-image: url("img/Horseshoe.jpeg");
+  background-size: cover;
+}
+
+#ninthSlot {
+  background-image: url("img/Jackpot.jpeg");
+  background-size: cover;
+}
+
+#tenthSlot {
+  background-image: url("img/Seven.jpeg");
+  background-size: cover;
+}
+
+#eleventhSlot {
+  background-image: url("img/Moneybag.jpeg");
+  background-size: cover;
+}
+
+#twelthSlot {
+  background-image: url("img/Diamond.jpeg");
+  background-size: cover;
+}
+
+#thirteenthSlot {
+  background-image: url("img/Bomb.jpeg");
+  background-size: cover;
+}
+
+#fourteenthSlot {
+  background-image: url("img/Bell.jpeg");
+  background-size: cover;
+}
+
+#fifteenthSlot {
+  background-image: url("img/Strawberry.jpeg");
+  background-size: cover;
+} */
