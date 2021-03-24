@@ -87,21 +87,21 @@ button:hover {
 
 .animate__backInDown {
     animation: backInDown;
-    animation-duration: 2s;;
+    animation-duration: 5s;;
 }
 
 #first {
-  background-image: url("img/Jackpot.jpeg");
+  /* background-image: url("img/Jackpot.jpeg"); */
   background-size: cover;
 }
 
 #second {
-  background-image: url("img/Bomb.jpeg");
+  /* background-image: url("img/Bomb.jpeg"); */
   background-size: cover;
 }
 
 #third {
-  background-image: url("img/Cherry.jpeg");
+  /* background-image: url("img/Cherry.jpeg"); */
   background-size: cover;
 }
 
