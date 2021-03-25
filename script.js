@@ -1,98 +1,90 @@
 /*----- constants -----*/
 
-let slotSymbols = [ 
-    {img: 'img/Bell.jpeg'}, 
-    {img: 'img/Bomb.jpeg'}, 
-    {img: 'img/Jackpot.jpeg'}, 
-    {img: 'img/Jackpot.jpeg'}, 
-    {img: 'img/Jackpot.jpeg'}, 
-    {img: 'img/Dragon.jpeg'}, 
-    {img: 'img/Heart.jpeg'}, 
-    {img: 'img/Jackpot.jpeg'}, 
-    {img: 'img/Jackpot.jpeg'}, 
-    {img: 'img/Moneybag.jpeg'}, 
-    {img: 'img/Seven.jpeg'}, 
-    {img: 'img/Strawberry.jpeg'}];
+let slotSymbols = [
+  { img: "img/Bell.jpeg" },
+  { img: "img/Bomb.jpeg" },
+  { img: "img/Jackpot.jpeg" },
+  { img: "img/Jackpot.jpeg" },
+  { img: "img/Jackpot.jpeg" },
+//   { img: "img/Dragon.jpeg" },
+//   { img: "img/Heart.jpeg" },
+  { img: "img/Jackpot.jpeg" },
+  { img: "img/Jackpot.jpeg" },
+//   { img: "img/Moneybag.jpeg" },
+//   { img: "img/Seven.jpeg" },
+//   { img: "img/Strawberry.jpeg" },
+];
 
- 
- const winAudio = new Audio('file:///Users/edithrodriguez/Music/Music/Media.localized/Unknown%20Artist/Unknown%20Album/slot-machine-sound-effect.mp3');
- const spinAudio = new Audio('file:///Users/edithrodriguez/Music/Music/Media.localized/SFX%20Producer/Unknown%20Album/Casino%20Slot%20Machine%2017.mp3');
- 
- 
- /*----- app's state (variables) -----*/
- //the results, the betting amount as you lose money
- 
- let lotteryWinner;
- 
- /*----- cached element references -----*/
- //html elements that will be manipulated - the different images that will get randomized.
- 
- const winResults = document.querySelector('#winner');
- const gameResults = document.querySelector('#spinAgain');
- const firstDiv = document.querySelector('#first img');
- const secondDiv = document.querySelector('#second img');
- const thirdDiv = document.querySelector('#third img');
- 
- 
- /*----- event listeners -----*/
- // will add event listener to the "button" to spin the slot machine
- 
- document.querySelector('div button').addEventListener("click", spin);
- 
- /*----- functions -----*/
- 
- function initialize() {
-     lotteryWinner = null;
-     render();
-     
- }
- 
- function getRandomSymbols() {
-    let randomSymbol = slotSymbols[Math.floor(Math.random() * slotSymbols.length)]
-    console.log(randomSymbol)
-    return randomSymbol;
- }
+const winAudio = new Audio(
+  "file:///Users/edithrodriguez/Music/Music/Media.localized/Unknown%20Artist/Unknown%20Album/slot-machine-sound-effect.mp3"
+);
+const spinAudio = new Audio(
+  "file:///Users/edithrodriguez/Music/Music/Media.localized/SFX%20Producer/Unknown%20Album/Casino%20Slot%20Machine%2017.mp3"
+);
 
- 
- function spin() {
-     spinAudio.play();
-     render()
-     winner = getWinner();
- }
- 
- 
- 
- function getWinner () {
-     if(firstDiv.src === slotSymbols[img] && secondDiv.src === slotSymbols[img] && thirdDiv.src === slotSymbols[img]) {
-         winAudio.play();
-         return 'You won the lottery!';
-     } else {
-        spin()
-        return gameResults.innerText = 'You lost, spin Again!';
-     }
-     
- }
- 
- 
- function render() {
-    firstDiv.src = getRandomSymbols().img;
-    secondDiv.src = getRandomSymbols().img;
-    thirdDiv.src = getRandomSymbols().img;
- }
- 
- 
- //    firstDiv.addEventListener('animationend', () => {
- //    });
- //    secondtDiv.addEventListener('animationend', () => {
- //     });
- //    thirdDiv.addEventListener('animationend', () => {
- //     }); 
- 
- initialize();
+/*----- app's state (variables) -----*/
+//the results, the betting amount as you lose money
 
+let win;
 
+/*----- cached element references -----*/
+//html elements that will be manipulated - the different images that will get randomized.
 
+const winResults = document.querySelector("#winner");
+const gameResults = document.querySelector("#spinAgain");
+const firstDiv = document.querySelector("#first img");
+const secondDiv = document.querySelector("#second img");
+const thirdDiv = document.querySelector("#third img");
 
+/*----- event listeners -----*/
+// will add event listener to the "button" to spin the slot machine
+
+document.querySelector("div button").addEventListener("click", spin);
+
+/*----- functions -----*/
+
+function initialize() {
+  win = null;
+  render();
+}
+
+function getRandomSymbols() {
+  let randomIdx = Math.floor(Math.random() * slotSymbols.length);
+  let randomSymbol = slotSymbols[randomIdx];
+  // console.log(randomSymbol)
+  return randomSymbol;
+}
+
+function spin() {
+  spinAudio.play();
+  render();
+  win = checkWin();
+}
+
+function checkWin() {
+  console.log(firstDiv.src);
+  if (firstDiv.src === secondDiv.src && secondDiv.src === thirdDiv.src) {
+    winAudio.play();
+    return (gameResults.innerText = "You won the lottery!");
+  } else {
+    return (gameResults.innerText = "You lost, spin Again!");
+  }
+}
+
+function render() {
+  firstDiv.src = getRandomSymbols().img;
+  secondDiv.src = getRandomSymbols().img;
+  thirdDiv.src = getRandomSymbols().img;
+}
+
+//    firstDiv.addEventListener('animationend', () => {
+//    });
+//    secondtDiv.addEventListener('animationend', () => {
+//     });
+//    thirdDiv.addEventListener('animationend', () => {
+//     });
+
+initialize();
 
 //icebox - make machine look like an actual slot machine
 //icebox - give images animation
