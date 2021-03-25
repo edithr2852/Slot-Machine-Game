@@ -3,16 +3,16 @@
 let slotSymbols = [
   { img: "img/Bell.jpeg" },
   { img: "img/Bomb.jpeg" },
+  { img: "img/Cherry.jpeg" },
+  { img: "img/Clover.jpeg" },
+  { img: "img/Diamond.jpeg" },
+  { img: "img/Dragon.jpeg" },
+  { img: "img/Heart.jpeg" },
+  { img: "img/HorseShoe.jpeg" },
   { img: "img/Jackpot.jpeg" },
-  { img: "img/Jackpot.jpeg" },
-  { img: "img/Jackpot.jpeg" },
-//   { img: "img/Dragon.jpeg" },
-//   { img: "img/Heart.jpeg" },
-  { img: "img/Jackpot.jpeg" },
-  { img: "img/Jackpot.jpeg" },
-//   { img: "img/Moneybag.jpeg" },
-//   { img: "img/Seven.jpeg" },
-//   { img: "img/Strawberry.jpeg" },
+  { img: "img/Moneybag.jpeg" },
+  { img: "img/Seven.jpeg" },
+  { img: "img/Strawberry.jpeg" },
 ];
 
 const winAudio = new Audio(
