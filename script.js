@@ -16,10 +16,10 @@ let slotSymbols = [
 ];
 
 const winAudio = new Audio(
-  "file:///Users/edithrodriguez/Music/Music/Media.localized/Unknown%20Artist/Unknown%20Album/slot-machine-sound-effect.mp3"
+  "audio/win.mp3"
 );
 const spinAudio = new Audio(
-  "file:///Users/edithrodriguez/Music/Music/Media.localized/SFX%20Producer/Unknown%20Album/Casino%20Slot%20Machine%2017.mp3"
+  "audio/Spin.mp3"
 );
 
 /*----- app's state (variables) -----*/
