@@ -8,7 +8,7 @@ let slotSymbols = [
   { img: "img/Diamond.jpeg" },
   { img: "img/Dragon.jpeg" },
   { img: "img/Heart.jpeg" },
-  { img: "img/HorseShoe.jpeg" },
+  { img: "img/Horseshoe.jpeg" },
   { img: "img/Jackpot.jpeg" },
   { img: "img/Moneybag.jpeg" },
   { img: "img/Seven.jpeg" },
