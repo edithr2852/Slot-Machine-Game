@@ -12,7 +12,7 @@ let slotSymbols = [
   { img: "img/Jackpot.jpeg" },
   { img: "img/Moneybag.jpeg" },
   { img: "img/Seven.jpeg" },
-  { img: "img/Strawberry.jpeg" },
+  { img: "img/Strawberry.jpeg" }, 
 ];
 
 const winAudio = new Audio(
@@ -30,7 +30,7 @@ let win;
 /*----- cached element references -----*/
 //html elements that will be manipulated - the different images that will get randomized.
 
-const winResults = document.querySelector("#winner");
+// const winResults = document.querySelector("#winner");
 const gameResults = document.querySelector("#spinAgain");
 const firstDiv = document.querySelector("#first img");
 const secondDiv = document.querySelector("#second img");

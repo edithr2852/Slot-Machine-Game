@@ -1,33 +1,4 @@
 
-
-/* ----------- iPhone X ----------- */
-
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-
-}
-
-/* Portrait */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
-
-}
-
-/* Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { 
-
-}
-
 body {
   background-image: url(https://images.hdqwalls.com/download/neon-city-pan-4k-20-2560x1440.jpg);
   background-size: cover;
@@ -35,31 +6,78 @@ body {
 }
 
 .topEl {
-    align-content: center;
-    text-align: center;
-}
-
-h1 {
-  font-size: 50px;
+  align-content: center;
   text-align: center;
-  color: #ff6ec7;
-  text-shadow: 0 0 3px #ff6ec7, 0 0 20px rgb(255 110 199 / 0.8),
-    0 0 35px rgb(255 110 199 / 0.7), 0 0 50px rgb(255 110 199 / 0.6);
-  border-color: #fff;
-  font-family: Rye, cursive;
-  -webkit-text-stroke: 0.3px rgb(112, 3, 85);
 }
-
 
 h2 {
   font-size: 20px;
   text-align: center;
-  color: #ff6ec7;
-  text-shadow: 0 0 3px #ff6ec7, 0 0 20px rgb(255 110 199 / 0.8),
-    0 0 35px rgb(255 110 199 / 0.7), 0 0 50px rgb(255 110 199 / 0.6);
-  border-color: #fff;
+  color: #0099ff;
+  text-shadow: 0 0 3px #0099ff, 0 0 20px rgb(137 207 240 / 0.8),
+    0 0 35px rgb(137 207 240 / 0.7), 0 0 50px rgb(137 207 240 / 0.6);
+  border-color: rgb(0, 0, 0);
   font-family: Rye, cursive;
-  -webkit-text-stroke: 0.3px rgb(112, 3, 85);
+  -webkit-text-stroke: 0.5px rgb(16 52 166);
+  animation: blink 12s infinite;
+  -webkit-animation: blink 1s infinite;
+}
+
+h1 {
+  font-size: calc(10px + 10vh);
+  line-height: calc(5px + 5vh);
+  text-shadow: 0 0 5px #ff6ec7, 0 0 15px #ff6ec7, 0 0 20px #ff6ec7,
+    0 0 40px #ff6ec7, 0 0 60px #bb39f7, 0 0 10px #56ff2c, 0 0 98px #bb39f7;
+  color: #f7eff5;
+  -webkit-text-stroke: 0.1px rgb(141, 111, 133);
+  font-family: "Rye", cursive;
+  text-align: center;
+  animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite;
+}
+
+@-webkit-keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow: 0 0 5px #ff6ec7, 0 0 15px #ff6ec7, 0 0 20px #ff6ec7,
+      0 0 40px #ff6ec7, 0 0 60px #bb39f7, 0 0 10px #ff6ec7, 0 0 98px #bb39f7;
+    color: #f7eff5;
+  }
+}
+
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow: 0 0 5px #ff6ec7, 0 0 15px #ff6ec7, 0 0 20px #ff6ec7,
+      0 0 40px #ff6ec7, 0 0 60px #bb39f7, 0 0 10px #56ff2c, 0 0 98px #bb39f7;
+    color: #f7eff5;
+  }
 }
 
 .slotColumns {
@@ -114,9 +132,7 @@ button:hover {
   border-color: #fff;
 }
 
-
 .animate__backInDown {
-    animation: backInDown;
-    animation-duration: 5s;;
+  animation: backInDown;
+  animation-duration: 5s;
 }
-
