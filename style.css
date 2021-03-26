@@ -134,5 +134,5 @@ button:hover {
 
 .animate__backInDown {
   animation: backInDown;
-  animation-duration: 5s;
+  animation-duration: 4s;
 }
