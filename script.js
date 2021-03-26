@@ -2,13 +2,13 @@
 
 let slotSymbols = [
   { img: "img/Bell.jpeg" },
-  { img: "img/Bomb.jpeg" },
+  { img: "img/Seven.jpeg" },
   { img: "img/Cherry.jpeg" },
   { img: "img/Clover.jpeg" },
   { img: "img/Diamond.jpeg" },
   { img: "img/Dragon.jpeg" },
   { img: "img/Heart.jpeg" },
-//   { img: "img/Horseshoe.jpeg" },
+  { img: "img/Dragon.jpeg" },
   { img: "img/Jackpot.jpeg" },
   { img: "img/Moneybag.jpeg" },
   { img: "img/Seven.jpeg" },
@@ -65,7 +65,7 @@ function checkWin() {
   console.log(firstDiv.src);
   if (firstDiv.src === secondDiv.src && secondDiv.src === thirdDiv.src) {
     winAudio.play();
-    return (gameResults.innerText = "You won the lottery!");
+    return (gameResults.innerText = "You won the jackpot!");
   } else {
     return (gameResults.innerText = "You lost, spin Again!");
   }
