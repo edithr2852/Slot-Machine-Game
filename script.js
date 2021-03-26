@@ -28,9 +28,7 @@ const spinAudio = new Audio(
 let win;
 
 /*----- cached element references -----*/
-//html elements that will be manipulated - the different images that will get randomized.
 
-// const winResults = document.querySelector("#winner");
 const gameResults = document.querySelector("#spinAgain");
 const firstDiv = document.querySelector("#first img");
 const secondDiv = document.querySelector("#second img");
@@ -77,14 +75,6 @@ function render() {
   thirdDiv.src = getRandomSymbols().img;
 }
 
-//    firstDiv.addEventListener('animationend', () => {
-//    });
-//    secondtDiv.addEventListener('animationend', () => {
-//     });
-//    thirdDiv.addEventListener('animationend', () => {
-//     });
-
 initialize();
 
-//icebox - make machine look like an actual slot machine
-//icebox - give images animation
+
